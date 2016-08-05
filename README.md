@@ -20,6 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
+Example of adding Cache-Control header into calculating ETag:
+
+```ruby
+config.middleware.insert_before(Rack::ETag, ::HeaderableEtag::Middleware, ['Cache-Control'])
+```
+
 
 ## Development
 
